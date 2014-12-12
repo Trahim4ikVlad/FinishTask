@@ -11,8 +11,8 @@ namespace DataAccessLayer
 {
     using System;
     using System.Collections.Generic;
-    
-    public partial class Client
+
+    public partial class Client :IDomainEntity
     {
         public Client()
         {

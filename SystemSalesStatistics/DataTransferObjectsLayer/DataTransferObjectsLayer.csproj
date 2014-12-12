@@ -45,13 +45,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ClientViewModel.cs" />
-    <Compile Include="ManagerViewModel.cs" />
+    <Compile Include="DtoEntity\ClientViewModel.cs" />
+    <Compile Include="DtoEntity\ManagerViewModel.cs" />
+    <Compile Include="IDtoEntity.cs" />
     <Compile Include="MappedTo.cs" />
-    <Compile Include="OrderViewModel.cs" />
+    <Compile Include="DtoEntity\OrderViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="DiagramDTOLayer.cd" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>

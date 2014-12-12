@@ -4,12 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using AutoMapper;
+using DataAccessLayer;
 
 namespace DataTransferObjectsLayer
 {
-    public abstract class MappedTo<T>
+    public abstract class MappedTo<T> where T : class
     {
-        public MappedTo()
+        protected MappedTo()
         {
             Mapper.CreateMap(GetType(), typeof(T));
         }

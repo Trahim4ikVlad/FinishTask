@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
 
-namespace DataTransferObjectsLayer
+namespace DataTransferObjectsLayer.DtoEntity
 {
-    public class ManagerViewModel:MappedTo<Manager>
+    public class ManagerViewModel : MappedTo<Manager>,IDtoEntity
     {
         public int ID { get; set; }
         public string Name { get; set; }

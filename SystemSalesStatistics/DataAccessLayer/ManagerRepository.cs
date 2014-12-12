@@ -8,7 +8,6 @@ namespace DataAccessLayer
 {
     public class ManagerRepository:GenericDataRepository<Manager>, IManagerRepository
     {
-       
     }
     public interface IManagerRepository : IGenericDataRepository<Manager>
     {

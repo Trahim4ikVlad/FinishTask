@@ -51,6 +51,7 @@
     </Compile>
     <Compile Include="ClientRepository.cs" />
     <Compile Include="GenericDataRepository.cs" />
+    <Compile Include="IDomainEntity.cs" />
     <Compile Include="IGenericDataRepository.cs" />
     <Compile Include="Manager.cs">
       <DependentUpon>Model.tt</DependentUpon>
@@ -86,6 +87,7 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <None Include="DiagramDAL.cd" />
     <None Include="Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model.edmx</DependentUpon>

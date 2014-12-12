@@ -28,7 +28,7 @@ namespace DataAccessLayer
             return list;
         }
 
-        public virtual IList<T> GetList(Func<T, bool> @where, params Expression<Func<T, object>>[] navigationProperties)
+        public virtual IList<T> GetList(Func<T, bool> where, params Expression<Func<T, object>>[] navigationProperties)
         {
             List<T> list = null;
 

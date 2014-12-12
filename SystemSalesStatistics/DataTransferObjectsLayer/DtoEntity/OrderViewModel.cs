@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using DataAccessLayer;
 
-namespace DataTransferObjectsLayer
+namespace DataTransferObjectsLayer.DtoEntity
 {
-    public class OrderViewModel:MappedTo<Order>
+    public class OrderViewModel : MappedTo<Order>,IDtoEntity
     {
         public int ID { get; set; }
         public DateTime OrderDate { get; set; }
