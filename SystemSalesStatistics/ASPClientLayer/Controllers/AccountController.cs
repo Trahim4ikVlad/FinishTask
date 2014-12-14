@@ -29,7 +29,6 @@ namespace ASPClientLayer.Controllers
 
         //
         // POST: /Account/Login
-
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
@@ -60,7 +59,7 @@ namespace ASPClientLayer.Controllers
         //
         // GET: /Account/Register
 
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")] 
         public ActionResult Register()
         {
             return View();
@@ -68,9 +67,8 @@ namespace ASPClientLayer.Controllers
 
         //
         // POST: /Account/Register
-
         [HttpPost]
-        [AllowAnonymous]
+        [Authorize(Roles = "Administrator")] 
         [ValidateAntiForgeryToken]
         public ActionResult Register(RegisterModel model)
         {
@@ -81,6 +79,9 @@ namespace ASPClientLayer.Controllers
                 {
                     WebSecurity.CreateUserAndAccount(model.UserName, model.Password);
                     WebSecurity.Login(model.UserName, model.Password);
+                   
+                    Roles.AddUsersToRole(new[] { model.UserName }, "User");
+                  
                     return RedirectToAction("Index", "Home");
                 }
                 catch (MembershipCreateUserException e)

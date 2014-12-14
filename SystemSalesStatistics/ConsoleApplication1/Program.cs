@@ -16,7 +16,7 @@ namespace ConsoleApplication1
     {
         static void Main(string[] args)
         {
-           ClientViewModel model = new ClientViewModel()
+           IDtoEntity model = new ClientViewModel()
            {
                ID = 1,
                Name = "sdfs"
@@ -28,7 +28,10 @@ namespace ConsoleApplication1
                 ID = 1,
                 Name = "sfsdf"
             };
-            ManagerViewModel vieManagerViewModel = Mapper<Manager, ManagerViewModel>.ConvertToDto(manager);
+
+
+
+            /*ManagerViewModel vieManagerViewModel = Mapper<Manager, ManagerViewModel>.ConvertToDto(manager);
 
             Client client = Mapper<Client, ClientViewModel>.ConvertToDomain(model);
 
@@ -42,8 +45,8 @@ namespace ConsoleApplication1
             {
                 Console.WriteLine(clientViewModel.ID+""+clientViewModel.Name);
             }
-          //  Console.WriteLine(vieManagerViewModel.ID + "" + vieManagerViewModel.Name);
-            
+           */
+         
         }
     }
 }
